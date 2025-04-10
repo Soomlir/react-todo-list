@@ -1,6 +1,12 @@
+import HeaderComponent from "./components/HeaderComponent"
+import MainComponent from "./components/MainComponent"
+
 function App() {
   return (
-    4444
+    <div className="container">
+      <HeaderComponent />
+      <MainComponent />
+    </div>
   );
 }
 

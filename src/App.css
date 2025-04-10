@@ -1,3 +1,208 @@
 body {
   margin: 0;
 }
+
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
+.container {
+  width: 750px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.header {
+  grid-column: 1 / -1;
+}
+
+.header__title {
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 26px;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #252525;
+  text-align: center;
+}
+
+.todo__list {
+  display: grid;
+  grid-column: 1 / 2;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.todo__form {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 140px 54px;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.todo__item {
+  height: 38px;
+  padding: 5px 10px;
+  font-size: 16px;
+  line-height: 20px;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  box-sizing: border-box;
+  color: inherit;
+}
+
+.todo__select {
+  padding-left: 10px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+  background-color: #6c63ff;
+}
+
+.todo__select option {
+  color: #000000;
+  background-color: #ffffff;
+  text-transform: lowercase;
+}
+
+.todo__theme-toggle {
+  position: relative;
+  display: flex;
+  width: 38px;
+  height: 38px;
+  background-color: #6c63ff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.todo__theme-toggle::before {
+  content: "";
+  margin: auto;
+  width: 22px;
+  height: 22px;
+  background-color: #ffffff;
+  mask: url("/public/images/moon.svg");
+}
+
+.todo-list {
+  display: grid;
+  grid-template-columns: 1fr 140px 54px;
+  margin-bottom: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.todo-list__item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #6c63ff;
+}
+
+.todo-list__item label {
+  display: flex;
+  align-items: center;
+  color: #252525;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.todo-list__checkbox {
+  appearance: none;
+  width: 26px;
+  height: 26px;
+  margin-right: 20px;
+  border: 1px solid #6c63ff;
+  border-radius: 2px;
+  box-shadow: 0 4px 4px #00000040;
+  cursor: pointer;
+}
+
+.todo-list__item label {
+  color: #252525;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.todo-list__edit {
+  margin-right: 20px;
+  margin-left: auto;
+}
+
+.todo-list__edit,
+.todo-list__delete {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.todo-list__delete {
+  margin-right: 20px;
+}
+.todo-list__edit,
+.todo-list__delete {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.todo-list__edit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background-image: url("/public/images/pencil.svg");
+}
+
+.todo-list__delete::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background-image: url("/public/images/trash.svg");
+}
+
+.todo__new-post {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin-top: 40px;
+  background: #6c63ff;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 4px #00000040;
+  cursor: pointer;
+}
+
+.todo__new-post::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+  background-image: url("/public/images/plus.svg");
+}
