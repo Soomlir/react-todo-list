@@ -6,5 +6,3 @@
 - html
 - css
 - react
-
-[Опубликованная версия](https://soomlir.github.io/react-todo-list/)
